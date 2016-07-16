@@ -3,15 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
 		<title>reveal.js</title>
-
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
-
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -24,8 +20,307 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+        <section>
+          <h1>White Board</h1>
+        </section>
+        <section>
+          <h2>console output</h2>
+          <pre>
+            <code data-trim contenteditable>
+let foo = "Hello";
+(function() {
+  let bar = " World";
+  console.log(foo + bar);
+})();
+console.log(foo + bar);
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h2>console output</h2>
+          <pre>
+            <code data-trim contenteditable>
+let x = 5;
+(function () {
+    let x;
+    console.log(x);
+    x = 10;
+    console.log(x);
+})();
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h2>console output</h2>
+          <pre>
+            <code data-trim contenteditable>
+function consoleFunction(ele) {
+  let text = `successful ${ele}`;
+  let useThis = function(){console.log(text);}
+  return useThis;
+}
+​
+const testThis = consoleFunction('Test');
+testThis();
+            </code>
+          </pre>
+        </section>
+        ​
+        <section>
+          <h2>True/False?</h2>
+          <pre>
+            <code data-trim contenteditable>
+new String("abc") = "abc"
+​
+new String("abc") == "abc"
+​
+new String("abc") === "abc"
+​
+new String("abc") ==== "abc"
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h2>Chaining</h2>
+          <pre>
+            <code data-trim contenteditable>
+$( "button#play-movie" ).on( "click", playMovie );
+$( "button#play-movie" ).css( "background-color", "orange" );
+$( "button#play-movie" ).show();
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h2>Reverse Name</h2>
+          <p>Write a statement that takes your name and returns it backwards. Example:</p>
+          <pre>
+            <code data-trim contenteditable>
+"Hello"
+​
+console result: "olleH"
+​
+            </code>
+          </pre>
+        </section>
+        ​
+        <section>
+          <h2>Return List</h2>
+          <p>Return array as an unordered html list in alphabetical order.</p>
+          <pre>
+            <code data-trim contenteditable>
+let friends = ["Mike", "Stacy", "Andy", "Rick"];
+            </code>
+          </pre>
+        </section>
+        ​
+        ​
+        ​
+        ​
+        <section>
+          <h2>Implement Array.prototype.map</h2>
+          ​
+          <p><strong>Question:</strong></p>
+          <p>Write a method that performs a function on each element in an array, and returns a new, processed array (double each number in array).</p>
+          ​
+          <pre>
+<code data-trim contenteditable>
+let numbers = [1, 4, 9];
+let doubles = ???;
+​
+// doubles will be [2, 8, 18]. numbers is still [1, 4, 9]
+</code>
+          </pre>
+        </section>
+        ​
+        ​
+        <section>
+          <h2>URL Parsing </h2>
+          <p>Accept the following URL</p>
+          <p>http://www.overstock.com/#blue-shoes,/k,/results.html?index=61&sort=Relevance&count=60&landingPage=false&CID=8675309
+          </p>
+          <p>Then return an object that looks like this:</p>
+          ​
+          <pre>
+<code data-trim contenteditable>
+{
+  index: 61,
+  sort: 'Relevance',
+  count: 60,
+  landingPage: false,
+  CID: 8675309
+}
+</code>
+          </pre>
+        </section>
+        <section>
+          <h2>Git</h2>
+          <p>How to resolve the merge conflict</p>
+          <pre>
+<code data-trim contenteditable>
+the number of planets are
+<<<<<<< HEAD
+nine
+=======
+eight
+>>>>>>> branch-a
+ </code>
+          </pre>
+        </section>
+        <section>
+          <h2>Rows</h2>
+          ​
+          <div class="group">
+            <div class="col1">row 1</div>
+            <div class="col2">row 2</div>
+            <div class="col3">row 3</div>
+          </div>
+          ​
+          <style>
+            .group div{width:100%;}
+            .col1{background:red;}
+            .col2{background:blue;}
+            .col3{background:green;}
+          </style>
+          ​
+        </section>
+        <section>
+          <h2>Columns</h2>
+          ​
+          <div class="group2">
+            <div class="col1_2">column 1</div>
+            <div class="col2_2">column 2</div>
+            <div class="col3_2">column 3</div>
+          </div>
+          ​
+          <style>
+            .group2 div{width:33.333%;float:left;}
+            .col1_2{background:red;}
+            .col2_2{background:blue;}
+            .col3_2{background:green;}
+          </style>
+          ​
+        </section>
+        <section>
+          <h2>Responsive</h2>
+          <p>3 rows under 1000px.</p>
+          ​
+          <!-- 					<pre>
+<code data-trim contenteditable>
+​
+<div class="group">
+  <div class="col1">column 1</div>
+  <div class="col2">column 2</div>
+  <div class="col3">column 3</div>
+</div>
+​
+<style>
+  .group div{width:100%;}
+  .col1{background:red;}
+  .col2{background:blue;}
+  .col3{background:green;}
+</style>
+​
+</code>
+          </pre> -->
+          <div class="group">
+            <div class="col1">row 1</div>
+            <div class="col2">row 2</div>
+            <div class="col3">row 3</div>
+          </div>
+          ​
+          <style>
+            .group div{width:100%;}
+            .col1{background:red;}
+            .col2{background:blue;}
+            .col3{background:green;}
+          </style>
+          <p>3 columns above 1000px. </p>
+          <div class="group2">
+            <div class="col1_2">column 1</div>
+            <div class="col2_2">column 2</div>
+            <div class="col3_2">column 3</div>
+          </div>
+          ​
+          <style>
+            .group2 div{width:33.333%;float:left;}
+            .col1_2{background:red;}
+            .col2_2{background:blue;}
+            .col3_2{background:green;}
+          </style>
+          ​
+        </section>
+        <section>
+          <h2>One More Row/Column</h2>
+          <p>Add a button that will create a new (yellow) row/column</p>
+          ​
+          <div class="group">
+            <div class="col1">row 1</div>
+            <div class="col2">row 2</div>
+            <div class="col3">row 3</div>
+            <div class="col4_4">row 4</div>
+          </div>
+          ​
+          <style>
+            .group4 div{width:100%;}
+          </style>
+          <p>&nbsp;</p>
+          <div class="group4">
+            <div class="col1_4">column 1</div>
+            <div class="col2_4">column 2</div>
+            <div class="col3_4">column 3</div>
+            <div class="col4_4">column 4</div>
+          </div>
+          ​
+          <style>
+            .group4 div{width:25%;float:left;}
+            .col1_4{background:red;}
+            .col2_4{background:blue;}
+            .col3_4{background:green;}
+            .col4_4{background:orange;}
+          </style>
+          ​
+        </section>
+        <section >
+          <h2>Our Site</h2>
+          <p>Click the logo and change the shipping banner to red. Click should not refresh the page.</p>
+          ​
+          <ul>
+            <li>Logo class: overstock-logo</li>
+            <li>Banner class: hd-shippingbanner</li>
+          </ul>
+          ​
+        </section>
+        ​
+        <section >
+          <h2>2nd Logo Click</h2>
+          <p>Updates the Shipping Banner to say:</p><p> "Shipping is FREE for everyone!!!"</p>
+          ​
+        </section>
+        <section >
+          <h2>3rd Logo Click</h2>
+          <p>Goes to cart (www.overstock.com/cart)</p>
+          ​
+        </section>
+        <section>
+          <h2>React</h2>
+          <p>The following code snippet has 4 errors, spot them!</p>
+          <pre>
+            <code data-trim contenteditable>
+import React from 'react';
+
+export default class App extends React.component {
+  render() {
+    return (
+      <div class="wrapper">
+        <p>Hello, World!</p>
+      </div>
+      <div class="sections"></div>
+    )
+  }
+}
+            </code>
+          </pre>
+        </section>
 			</div>
 		</div>
 
